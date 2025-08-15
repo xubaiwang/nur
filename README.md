@@ -4,9 +4,10 @@
 
 Current supported packages:
 
-| package   | version | description                       |
-| --------- | ------- | --------------------------------- |
-| `euporie` | v2.8.11 | Jupyter notebooks in the terminal |
+| package       | version | description                            |
+| ------------- | ------- | -------------------------------------- |
+| `euporie`     | v2.8.11 | Jupyter notebooks in the terminal      |
+| `deno-vulkan` | nixpkgs | Deno with auto vulkan-loader detection |
 
 ## Usage
 
