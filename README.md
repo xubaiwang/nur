@@ -4,10 +4,11 @@
 
 Current supported packages:
 
-| package       | version | description                            |
-| ------------- | ------- | -------------------------------------- |
-| `euporie`     | v2.8.11 | Jupyter notebooks in the terminal      |
-| `deno-vulkan` | nixpkgs | Deno with auto vulkan-loader detection |
+| package       | version  | description                            |
+| ------------- | -------- | -------------------------------------- |
+| `euporie`     | v2.8.11  | Jupyter notebooks in the terminal      |
+| `deno-vulkan` | nixpkgs  | Deno with auto vulkan-loader detection |
+| `akshare`     | v1.17.37 | Python akshare package                 |
 
 ## Usage
 
