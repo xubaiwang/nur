@@ -10,6 +10,12 @@ Current supported packages:
 | `deno-vulkan` | nixpkgs  | Deno with auto vulkan-loader detection |
 | `akshare`     | v1.17.37 | Python akshare package                 |
 
+## Dev Shells
+
+| package   | description                            |
+| ----------| -------------------------------------- |
+| `boa`     | A embeddable Javascript engine written in Rust |
+
 ## Usage
 
 Example nix flake usage:

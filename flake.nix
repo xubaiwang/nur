@@ -18,7 +18,8 @@
         pkgs = import nixpkgs { inherit system; };
       in
       {
-        packages = pkgs.callPackage ./packages {};
+        packages = pkgs.callPackage ./packages { };
+        devShells = pkgs.callPackage ./devShells { };
       }
     );
 }
