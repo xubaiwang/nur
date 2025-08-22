@@ -1,5 +1,6 @@
 name: "Update Akshare"
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 16 * * *'
 jobs:
