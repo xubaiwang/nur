@@ -1,18 +1,24 @@
 {
   python3Packages,
-  fetchPypi,
+  fetchFromGitHub,
   python-mini-racer,
   ...
 }:
 with python3Packages;
-buildPythonPackage rec {
+buildPythonPackage {
   pname = "akshare";
   version = "1.17.37";
   pyproject = true;
 
-  src = fetchPypi {
-    inherit pname version;
-    sha256 = "sha256-c789EeakvefWOv/3bDlRVeMN3CLt3bYaG+0QQaqlMNY=";
+  # src = fetchPypi {
+  #   inherit pname version;
+  #   sha256 = "sha256-c789EeakvefWOv/3bDlRVeMN3CLt3bYaG+0QQaqlMNY=";
+  # };
+  src = fetchFromGitHub {
+    owner = "akfamily";
+    repo = "akshare";
+    rev = "0bf588f07d58588a3f0d183ac39fad8ed5a9f083";
+    hash = "sha256-IrL/mYi3ohMHxsccD0OuIyyAWT8oRasmn/o92SvpUn8=";
   };
 
   # Linux 系統實際上也用 mini-racer
