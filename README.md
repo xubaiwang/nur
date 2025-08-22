@@ -20,7 +20,7 @@ Example nix flake usage:
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     xubaiwang = {
-      url = "github:xubaiwang/flakes";
+      url = "github:xubaiwang/nur-xubaiwang";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
