@@ -1,7 +1,7 @@
 {
   python3Packages,
   fetchFromGitHub,
-  python-mini-racer,
+  mini-racer,
   ...
 }:
 with python3Packages;
@@ -45,7 +45,7 @@ buildPythonPackage {
       decorator
       nest-asyncio
     ])
-    ++ [ python-mini-racer ];
+    ++ [ mini-racer ];
 
   pythonImportsCheck = [ "akshare" ];
 }

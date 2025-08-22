@@ -35,7 +35,7 @@ Example nix flake usage:
       system:
       let
         pkgs = import nixpkgs { inherit system; };
-        euporie = xubaiwang.packages.${system}.euporie;
+        euporie = xubaiwang.packages.${system}.python.euporie;
       in
       {
         devShells.default = with pkgs; mkShell {
