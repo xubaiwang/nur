@@ -20,6 +20,7 @@
       {
         packages = pkgs.callPackage ./packages { };
         devShells = pkgs.callPackage ./dev-shells { };
+        templates = pkgs.callPackage ./templates { };
       }
     );
 }
