@@ -19,7 +19,7 @@
       in
       {
         packages = pkgs.callPackage ./packages { };
-        devShells = pkgs.callPackage ./devShells { };
+        devShells = pkgs.callPackage ./dev-shells { };
       }
     );
 }
