@@ -12,7 +12,8 @@
       nixpkgs,
       flake-utils,
     }:
-    flake-utils.lib.eachDefaultSystem (
+
+    (flake-utils.lib.eachDefaultSystem (
       system:
       let
         pkgs = import nixpkgs { inherit system; };
@@ -20,7 +21,15 @@
       {
         packages = pkgs.callPackage ./packages { };
         devShells = pkgs.callPackage ./dev-shells { };
+      }
+    ))
+    // (flake-utils.lib.eachDefaultSystemPassThrough (
+      system:
+      let
+        pkgs = import nixpkgs { inherit system; };
+      in
+      {
         templates = pkgs.callPackage ./templates { };
       }
-    );
+    ));
 }
