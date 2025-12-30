@@ -17,6 +17,18 @@
         ./templates/bevy.nix
       ];
 
+      flake = {
+
+        templates.rust = {
+          description = "Rust dev shell template";
+          path = ./templates/rust;
+        };
+        templates.bevy = {
+          description = "Bevy dev shell template";
+          path = ./templates/bevy;
+        };
+      };
+
       systems = [
         "x86_64-linux"
         "aarch64-linux"
