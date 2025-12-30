@@ -3,7 +3,7 @@
   perSystem =
     { pkgs, lib, ... }:
     {
-      devShells.bevy = pkgs.mkShell {
+      devShells.rust = pkgs.mkShell {
         packages = with pkgs; [
           rust-analyzer
           rustfmt
