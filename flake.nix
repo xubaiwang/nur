@@ -14,7 +14,7 @@
         ./packages/ddddocr.nix
 
         # dev shells
-        ./devshells/boa.nix
+        ./dev-shells/boa.nix
 
         # templates
         ./templates/rust.nix
