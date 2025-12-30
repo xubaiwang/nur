@@ -10,6 +10,7 @@
 
         # dev shells
         ./dev-shells/boa.nix
+        ./dev-shells/rust.nix
         ./dev-shells/bevy.nix
       ];
 
