@@ -3,34 +3,34 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      flake-utils,
-    }:
+    { flake-parts, ... }@inputs:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        ./packages/ddddocr.nix
 
-    (flake-utils.lib.eachDefaultSystem (
-      system:
-      let
-        pkgs = import nixpkgs { inherit system; };
-      in
-      {
-        devShells.boa = pkgs.callPackage ./dev-shells/boa.nix;
+        ./devshells/boa.nix
+      ];
 
-        packages.ddddocr = pkgs.callPackage ./packages/ddddocr.nix;
-      }
-    ))
-    // (flake-utils.lib.eachDefaultSystemPassThrough (
-      system:
-      let
-        pkgs = import nixpkgs { inherit system; };
-      in
-      {
-        templates = pkgs.callPackage ./templates { };
-      }
-    ));
+      flake = {
+        templates.rust = {
+          description = "Rust dev shell template";
+          path = ./templates/rust;
+        };
+        templates.bevy = {
+          description = "Bevy dev shell template";
+          path = ./templates/bevy;
+        };
+      };
+
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
+    };
 }
