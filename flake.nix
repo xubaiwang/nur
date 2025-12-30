@@ -11,10 +11,6 @@
         # dev shells
         ./dev-shells/boa.nix
         ./dev-shells/bevy.nix
-
-        # templates
-        ./templates/rust.nix
-        ./templates/bevy.nix
       ];
 
       flake = {
