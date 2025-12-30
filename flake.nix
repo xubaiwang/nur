@@ -10,21 +10,16 @@
     { flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
+        # packages
         ./packages/ddddocr.nix
 
+        # dev shells
         ./devshells/boa.nix
-      ];
 
-      flake = {
-        templates.rust = {
-          description = "Rust dev shell template";
-          path = ./templates/rust;
-        };
-        templates.bevy = {
-          description = "Bevy dev shell template";
-          path = ./templates/bevy;
-        };
-      };
+        # templates
+        ./templates/rust.nix
+        ./templates/bevy.nix
+      ];
 
       systems = [
         "x86_64-linux"
