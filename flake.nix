@@ -7,6 +7,7 @@
       imports = [
         # packages
         ./packages/ddddocr.nix
+        ./packages/keep-split-ratio-nvim.nix
 
         # dev shells
         ./dev-shells/boa.nix
