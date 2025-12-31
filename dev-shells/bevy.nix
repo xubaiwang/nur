@@ -25,8 +25,8 @@
         ];
 
         LD_LIBRARY_PATH = "${lib.makeLibraryPath buildInputs}";
-
         NIX_NO_SELF_RPATH = true;
+        RUST_SRC_PATH = "${pkgs.rustPlatform.rustLibSrc}";
       };
     };
 }
