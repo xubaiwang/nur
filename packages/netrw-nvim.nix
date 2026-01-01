@@ -4,7 +4,7 @@
     { pkgs, ... }:
     {
       packages.netrw-nvim = pkgs.vimUtils.buildVimPlugin {
-        pname = "keep-split-ratio-nvim";
+        pname = "netrw-nvim";
         version = "0.0.0";
         src = pkgs.fetchFromGitHub {
           owner = "prichrd";
