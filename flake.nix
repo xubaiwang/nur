@@ -8,6 +8,7 @@
         # packages
         ./packages/ddddocr.nix
         ./packages/keep-split-ratio-nvim.nix
+        ./packages/netrw-nvim.nix
 
         # dev shells
         ./dev-shells/boa.nix
