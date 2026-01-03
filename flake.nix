@@ -9,6 +9,7 @@
         ./packages/ddddocr.nix
         ./packages/keep-split-ratio-nvim.nix
         ./packages/netrw-nvim.nix
+        ./packages/qwen-code-deno.nix
 
         # dev shells
         ./dev-shells/boa.nix
