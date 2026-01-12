@@ -15,6 +15,7 @@
         ./dev-shells/boa.nix
         ./dev-shells/rust.nix
         ./dev-shells/bevy.nix
+        ./dev-shells/nyquest.nix
       ];
 
       flake = {
